@@ -1,0 +1,22 @@
+<div [style.background]="color">
+  <h1>{{name}} </h1>
+  <input type="text" [(ngModel)]="username" placeholder="enter the username">
+  <p>username: {{username}} </p>
+  <h2>{{ age }}, {{email}} </h2>
+  <button (click)="add()">Update Age</button>
+  <button (click)="greetMe()" [ngStyle]="{'background-color': isLoggedIn? 'green' : 'red'}">Greet me</button>
+
+  <input type="text" [(ngModel)]="color" placeholder="enter your fav color">
+
+  <div *ngIf="isLoggedIn">
+    <h2>Welcome back!</h2>
+  </div>
+  <div *ngIf="!isLoggedIn">
+    <h3>Please LogIn</h3>
+  </div>
+
+  <input type="text" [(ngModel)]="search" placeholder="search...">
+  <ul *ngFor="let fruit of filter">
+    <li>{{fruit}}</li>
+  </ul>
+</div>

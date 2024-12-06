@@ -1,0 +1,40 @@
+<!-- <h1>Super Counter</h1>
+<app-counter></app-counter>
+<p *ngIf="4 | isEven">The number is even!</p>
+<p *ngIf="7 | isEven">The number is even!</p>
+<app-country-list></app-country-list>
+ -->
+
+<!-- <div>
+  <button onclick="buttonClicked">click me</button>
+  <input *ngIf="checked" type="checkbox" name="check" id="">
+</div> -->
+
+<div>
+  <button (click)="buttonClicked()"> click me</button>
+  <label>
+    <input type="checkbox" [(ngModel)]="checked">
+  </label>
+</div>
+
+<div>
+  <h2>{{count}} </h2>
+  <button (click)="dec()">-</button>
+  <button (click)="inc()">+</button>
+  <button (click)="reset()">x</button>
+</div>
+
+<div>
+  <br>
+  <input type="text" [(ngModel)]="newTask" placeholder="enter your task">
+  <button (click)="addTask()">add task</button>
+
+  <ul>
+    <li *ngFor="let item of tasks; let i = index">{{item}}
+      <button (click)="deleteTask(i)">Delete task</button>
+    </li>
+  </ul>
+</div>
+
+
+<app-user-profile></app-user-profile>

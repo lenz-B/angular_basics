@@ -1,0 +1,10 @@
+<div>
+  <h2>Count: {{count}} </h2>
+  <!-- <button (click)="decrement()">-</button> -->
+  <app-counter-button label="-" (buttonClick)="onButtonClick('Decrement')"></app-counter-button>
+  <!-- <button (click)="increment()">+</button> -->
+  <app-counter-button label="+" (buttonClick)="onButtonClick('Increment')"></app-counter-button>
+  <!-- <button (click)="reset()">Reset</button> -->
+  <app-counter-button label="Reset" (buttonClick)="onButtonClick('Reset')"></app-counter-button>
+  <app-operation-display [lastOperation]="operation"></app-operation-display>
+</div>
